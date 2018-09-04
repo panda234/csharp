@@ -10,7 +10,6 @@ namespace ConsoleApp4
     {
         public static void Main()
         {
-            System.Console.Write(123);
             Console.ReadKey();
         }
     }

@@ -14,23 +14,22 @@ namespace ConsoleApp4
     class Program
     {
         IWebDriver driver;
-
-        string path = AppDomain.CurrentDomain.BaseDirectory;
+        readonly string path = AppDomain.CurrentDomain.BaseDirectory;
 
         [SetUp]
-        public void startBrowser()
+        public void StartBrowser()
         {
             driver = new ChromeDriver(path);
         }
 
         [Test]
-        public void test()
+        public void Test()
         {
             driver.Url = "http://www.google.com";
         }
 
         [TearDown]
-        public void closeBrowser()
+        public void CloseBrowser()
         {
             driver.Close();
         }
